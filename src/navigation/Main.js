@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { List } from '../screens/List';
-import { TextDemo, ButtonDemo, FormDemo } from '../screens/Demos';
+import { TextDemo, ButtonDemo, FormDemo, SimpleDemo } from '../screens/Demos';
 
 const MainStack = createStackNavigator();
 
@@ -17,12 +17,17 @@ export const Main = () => (
     <MainStack.Screen
       name="FormDemo"
       component={FormDemo}
-      options={{ headerTitle: 'Button Demo' }}
+      options={{ headerTitle: 'Form Demo' }}
     />
     <MainStack.Screen
       name="ButtonDemo"
       component={ButtonDemo}
       options={{ headerTitle: 'Button Demo' }}
+    />
+    <MainStack.Screen
+      name="SimpleDemo"
+      component={SimpleDemo}
+      options={{ headerTitle: 'Simple Demo' }}
     />
   </MainStack.Navigator>
 );

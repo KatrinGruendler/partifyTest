@@ -28,6 +28,11 @@ const screens = [
     subtitle: 'An example of using the Button.js components.',
     target: 'ButtonDemo',
   },
+  {
+    title: 'Simple',
+    subtitle: 'An example of using the a simple View.',
+    target: 'SimpleDemo',
+  },
 ];
 
 export const List = ({ navigation }) => {

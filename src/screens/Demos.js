@@ -58,9 +58,14 @@ export const ButtonDemo = () => (
     </Button>
     <Button
       type="outline"
-      onPress={() => Alert.alert('you pressed the outline button')}
-    >
+      onPress={() => Alert.alert('you pressed the outline button')}>
       Outline Button
     </Button>
   </View>
+);
+
+export const SimpleDemo = () => (
+  <View style={styles.container}>
+      <Text>Hello World! This is SimpleDemo!</Text>
+    </View>
 );
