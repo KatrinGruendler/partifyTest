@@ -1,18 +1,21 @@
 import React from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { StyleSheet, FlatList, View, Alert } from 'react-native';
 
 import colors from '../constants/colors';
+import { Text } from '../components/Text';
+import { Button } from '../components/Button';
+import { TextInput } from '../components/Form';
 import { ListItem, ListSeparator } from '../components/List';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
-    paddingVertical: 20,
+    backgroundColor: colors.white,
+    padding: 10,
   },
 });
 
-const screens = [
+const events = [
   {
     title: 'Text',
     subtitle: 'An example of using the Text.js components.',
@@ -40,11 +43,11 @@ const screens = [
   },
 ];
 
-export const List = ({ navigation }) => {
+export const EventDemo = ({ navigation }) => {
   return (
     <FlatList
       style={styles.container}
-      data={screens}
+      data={events}
       keyExtractor={item => item.title}
       renderItem={({ item }) => (
         <ListItem

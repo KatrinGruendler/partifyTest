@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { List } from '../screens/List';
 import { TextDemo, ButtonDemo, FormDemo, SimpleDemo } from '../screens/Demos';
+import { EventDemo } from '../screens/EventView';
 
 const MainStack = createStackNavigator();
 
@@ -28,6 +29,11 @@ export const Main = () => (
       name="SimpleDemo"
       component={SimpleDemo}
       options={{ headerTitle: 'Simple Demo' }}
+    />
+    <MainStack.Screen
+      name="EventDemo"
+      component={EventDemo}
+      options={{ headerTitle: 'Events' }}
     />
   </MainStack.Navigator>
 );
