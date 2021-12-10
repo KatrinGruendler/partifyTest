@@ -48,6 +48,22 @@ const myEvents = [
     event_tags: 'A simple test for my events.',
     target: 'ButtonDemo',
   },
+<<<<<<< HEAD
+=======
+];
+
+const myEvents = [
+   {
+    title: 'Simple',
+    subtitle: 'An example of using the a simple View.',
+    target: 'SimpleDemo',
+  },
+  {
+    title: 'Events',
+    subtitle: 'A simple GET Request for all Events.',
+    target: 'EventDemo',
+  },
+>>>>>>> 751062cd91648ae1d566ddbb57ad20ed8802ec3e
 ];
 
 export const EventDemo = ({ navigation }) => {
@@ -65,12 +81,15 @@ export const EventDemo = ({ navigation }) => {
     }
   }
 
+<<<<<<< HEAD
   let allEventsAPI = fetchAllEvents();
   console.log(allEventsAPI);
 
   //let myEventsAPI = fetchMyEvents();
   //console.log(myEventsAPI);
 
+=======
+>>>>>>> 751062cd91648ae1d566ddbb57ad20ed8802ec3e
   return (
     <View style={styles.container}>
       {
@@ -83,6 +102,7 @@ export const EventDemo = ({ navigation }) => {
 
       <FlatList
         style={styles.container}
+<<<<<<< HEAD
         //data={viewState === 'allEvents' ? allEvents : myEvents}
         data={viewState === 'allEvents' ? allEventsAPI : myEvents}
         keyExtractor={item => item.title}
@@ -98,6 +118,16 @@ export const EventDemo = ({ navigation }) => {
             subtitle={item.subtitle}
             onPress={() => navigation.push(item.target)}
           />*/
+=======
+        data={viewState === 'allEvents' ? allEvents : myEvents}
+        keyExtractor={item => item.title}
+        renderItem={({ item }) => (
+          <ListItem
+            title={item.title}
+            subtitle={item.subtitle}
+            onPress={() => navigation.push(item.target)}
+          />
+>>>>>>> 751062cd91648ae1d566ddbb57ad20ed8802ec3e
         )}
         ItemSeparatorComponent={ListSeparator}
         ListHeaderComponent={ListSeparator}
